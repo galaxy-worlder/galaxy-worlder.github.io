@@ -1,0 +1,308 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>激酶结构域追踪：近期顶级期刊中的 SH1/SH2/SH3 互作模式解析 | Galaxy Lab</title><meta name="author" content="galaxy-worlder"><meta name="copyright" content="galaxy-worlder"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0d0d"><meta name="description" content="作为 CellBioReview 计划的先导篇，本文将重点梳理近期文献中关于 SRC 家族激酶 SH1、SH2 与 SH3 结构域的空间构象变异与互作模式，并探讨二维空间投影分析在蛋白互作预测中的应用潜力。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="激酶结构域追踪：近期顶级期刊中的 SH1&#x2F;SH2&#x2F;SH3 互作模式解析">
+<meta property="og:url" content="https://galaxy-worlder.github.io/2026/04/29/Kinase-Domain-SH-Review/index.html">
+<meta property="og:site_name" content="Galaxy Lab">
+<meta property="og:description" content="作为 CellBioReview 计划的先导篇，本文将重点梳理近期文献中关于 SRC 家族激酶 SH1、SH2 与 SH3 结构域的空间构象变异与互作模式，并探讨二维空间投影分析在蛋白互作预测中的应用潜力。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://galaxy-worlder.github.io/img/wallpaper1.png">
+<meta property="article:published_time" content="2026-04-29T08:00:00.000Z">
+<meta property="article:modified_time" content="2026-04-29T16:22:36.000Z">
+<meta property="article:author" content="galaxy-worlder">
+<meta property="article:tag" content="CellBioReview">
+<meta property="article:tag" content="Kinase">
+<meta property="article:tag" content="SRC">
+<meta property="article:tag" content="Structural Biology">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://galaxy-worlder.github.io/img/wallpaper1.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "激酶结构域追踪：近期顶级期刊中的 SH1/SH2/SH3 互作模式解析",
+  "url": "https://galaxy-worlder.github.io/2026/04/29/Kinase-Domain-SH-Review/",
+  "image": "https://galaxy-worlder.github.io/img/wallpaper1.png",
+  "datePublished": "2026-04-29T08:00:00.000Z",
+  "dateModified": "2026-04-29T16:22:36.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "galaxy-worlder",
+      "url": "https://galaxy-worlder.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://galaxy-worlder.github.io/2026/04/29/Kinase-Domain-SH-Review/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.4"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":2,"unescape":true,"pagination":{"enable":false,"hitsPerPage":8},"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '激酶结构域追踪：近期顶级期刊中的 SH1/SH2/SH3 互作模式解析',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><style>#aside-sidebar .card-widget, #post, .layout > .recent-posts > .recent-post-item { background: rgba(25, 25, 25, 0.75) !important; backdrop-filter: blur(10px) saturate(150%); border: 1px solid rgba(255, 255, 255, 0.1); }</style><link rel="stylesheet" href="/css/galaxy-command.css"><link rel="stylesheet" href="/css/project-page.css"><link rel="stylesheet" href="/css/research-galaxy.css"><meta name="generator" content="Hexo 8.1.1"></head><body><div class="bg-animation" id="web_bg" style="background-image: url(/img/wallpaper.jpg);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/my-avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">8</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-satellite-dish"></i><span> 🛰️ 指挥中心</span></a></div><div class="menus_item"><a class="site-page" href="/projects/"><i class="fa-fw fas fa-flask"></i><span> 🔬 项目矩阵</span></a></div><div class="menus_item"><a class="site-page" href="/research-galaxy/"><i class="fa-fw fas fa-star"></i><span> 🌌 研究星图</span></a></div><div class="menus_item"><a class="site-page" href="/notes/"><i class="fa-fw fas fa-vial"></i><span> 🧪 实验记录</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://github.com/galaxy-worlder"><i class="fa-fw fab fa-github"></i><span> GitHub</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/img/wallpaper1.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Galaxy Lab</span></a><a class="nav-page-title" href="/"><span class="site-name">激酶结构域追踪：近期顶级期刊中的 SH1/SH2/SH3 互作模式解析</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-satellite-dish"></i><span> 🛰️ 指挥中心</span></a></div><div class="menus_item"><a class="site-page" href="/projects/"><i class="fa-fw fas fa-flask"></i><span> 🔬 项目矩阵</span></a></div><div class="menus_item"><a class="site-page" href="/research-galaxy/"><i class="fa-fw fas fa-star"></i><span> 🌌 研究星图</span></a></div><div class="menus_item"><a class="site-page" href="/notes/"><i class="fa-fw fas fa-vial"></i><span> 🧪 实验记录</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://github.com/galaxy-worlder"><i class="fa-fw fab fa-github"></i><span> GitHub</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">激酶结构域追踪：近期顶级期刊中的 SH1/SH2/SH3 互作模式解析</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-04-29T08:00:00.000Z" title="发表于 2026-04-29 16:00:00">2026-04-29</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-04-29T16:22:36.000Z" title="更新于 2026-04-30 00:22:36">2026-04-30</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Literature-Review/">Literature Review</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p>作为我们开源文献阅读库 <code>CellBioReview</code> 的核心梳理内容之一，本期我们将目光聚焦于细胞信号传导的“核心枢纽”—— <strong>SRC 家族激酶 (SFKs)</strong>。</p>
+<p>在近期的结构生物学与生物信息学交叉研究中，如何精确量化和预测 SH1 (激酶催化结构域)、SH2 (磷酸酪氨酸结合域) 与 SH3 (富含脯氨酸序列结合域) 之间的动态互作，已经成为了一个极其火热的计算生物学工程难题。</p>
+<h3 id="1-src-激酶的自抑制构象与热力学网络"><a class="markdownIt-Anchor" href="#1-src-激酶的自抑制构象与热力学网络"></a> 🧬 1. SRC 激酶的自抑制构象与热力学网络</h3>
+<p>我们知道，SRC 激酶的活性受其自身的闭合构象（Closed Conformation）严格调控。在静息状态下，SH2 结构域向后折叠并结合自身的 pY527 磷酸化位点，而 SH3 结构域则紧紧扣住 SH2 与激酶结构域之间的连接区（Linker）。</p>
+<p>然而，这种自抑制并非静态的“死锁”，而是一个高度动态的<strong>构象平衡 (Conformational Equilibrium)</strong>。解开这种状态需要外界靶标配体的竞争性结合。在评估这种结合亲和力时，我们不仅要考虑局部的氢键网络，还需要从热力学角度计算其解离常数 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>K</mi><mi>d</mi></msub></mrow><annotation encoding="application/x-tex">K_d</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">K</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:-0.07153em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">d</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 与吉布斯自由能变 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>G</mi></mrow><annotation encoding="application/x-tex">\Delta G</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord">Δ</span><span class="mord mathnormal">G</span></span></span></span> 的关系：</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi mathvariant="normal">Δ</mi><msup><mi>G</mi><mo>∘</mo></msup><mo>=</mo><mo>−</mo><mi>R</mi><mi>T</mi><mi>ln</mi><mo>⁡</mo><mrow><mo fence="true">(</mo><mfrac><mrow><mo stretchy="false">[</mo><mi>S</mi><mi>H</mi><mn>2</mn><mo>⋅</mo><mi>p</mi><msub><mi>Y</mi><mrow><mi>l</mi><mi>i</mi><mi>g</mi><mi>a</mi><mi>n</mi><mi>d</mi></mrow></msub><mo stretchy="false">]</mo></mrow><mrow><mo stretchy="false">[</mo><mi>S</mi><mi>H</mi><mn>2</mn><mo stretchy="false">]</mo><mo stretchy="false">[</mo><mi>p</mi><msub><mi>Y</mi><mrow><mi>l</mi><mi>i</mi><mi>g</mi><mi>a</mi><mi>n</mi><mi>d</mi></mrow></msub><mo stretchy="false">]</mo></mrow></mfrac><mo fence="true">)</mo></mrow><mo>=</mo><mi>R</mi><mi>T</mi><mi>ln</mi><mo>⁡</mo><msub><mi>K</mi><mi>d</mi></msub></mrow><annotation encoding="application/x-tex">\Delta G^\circ = -RT \ln \left( \frac{[SH2\cdot pY_{ligand}]}{[SH2][pY_{ligand}]} \right) = RT \ln K_d
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.724115em;vertical-align:0em;"></span><span class="mord">Δ</span><span class="mord"><span class="mord mathnormal">G</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.724115em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">∘</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.4221079999999997em;vertical-align:-0.972108em;"></span><span class="mord">−</span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop">ln</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size3">(</span></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.427em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mopen">[</span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="mord">2</span><span class="mclose">]</span><span class="mopen">[</span><span class="mord mathnormal">p</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">Y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361079999999999em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.01968em;">l</span><span class="mord mathnormal mtight">i</span><span class="mord mathnormal mtight" style="margin-right:0.03588em;">g</span><span class="mord mathnormal mtight">a</span><span class="mord mathnormal mtight">n</span><span class="mord mathnormal mtight">d</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mclose">]</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mopen">[</span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="mord">2</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathnormal">p</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">Y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361079999999999em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.01968em;">l</span><span class="mord mathnormal mtight">i</span><span class="mord mathnormal mtight" style="margin-right:0.03588em;">g</span><span class="mord mathnormal mtight">a</span><span class="mord mathnormal mtight">n</span><span class="mord mathnormal mtight">d</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mclose">]</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.972108em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size3">)</span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.84444em;vertical-align:-0.15em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop">ln</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">K</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:-0.07153em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">d</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span></p>
+<blockquote>
+<p><strong>💡 实验室笔记：</strong> 只有当外部靶标肽段与 SH2/SH3 结合所释放的自由能，足以克服（或显著低于）其内部自抑制状态的结合能时，激酶的 SH1 催化裂谷才会被完全暴露，进而触发下游的级联磷酸化。这种长程的能量传递，本质上是一种精妙的<strong>别构效应 (Allosteric Effect)</strong>。</p>
+</blockquote>
+<hr />
+<h3 id="2-近期核心文献模式梳理与趋势研判"><a class="markdownIt-Anchor" href="#2-近期核心文献模式梳理与趋势研判"></a> 📊 2. 近期核心文献模式梳理与趋势研判</h3>
+<p>为了更直观地对比不同文献对 SH 结构域互作机制的解析视角，我提取了近期几篇重磅文章的核心数据，汇总如下：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">期刊分类</th>
+<th style="text-align:left">研究侧重点 (Focus)</th>
+<th style="text-align:left">核心算法/技术 (Method)</th>
+<th style="text-align:left">关键结论对互作模式的修正 (Key Finding)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Nature Struct &amp; Mol Biol</strong></td>
+<td style="text-align:left">SH3 结构域的变构调节</td>
+<td style="text-align:left">分子动力学模拟 (MD) + NMR</td>
+<td style="text-align:left">SH3 结构域的微小柔性变化可通过别构网络，非线性地放大或抑制 SH1 催化结构域的活性。</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Cell</strong></td>
+<td style="text-align:left">SH2 靶标特异性图谱</td>
+<td style="text-align:left">深度突变扫描 (DMS)</td>
+<td style="text-align:left">揭示了在不同细胞代谢压力下，SH2 结构域对 pY-motif 侧链电荷容忍度的动态阈值变化。</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Bioinformatics</strong></td>
+<td style="text-align:left">大规模互作序列解码</td>
+<td style="text-align:left">Transformer + PSSM 矩阵</td>
+<td style="text-align:left">引入基于多头注意力机制的序列打分模型，大幅降低了传统 PSSM 在长程相互作用预测中的假阳性率。</td>
+</tr>
+</tbody>
+</table>
+<p><strong>🔬 趋势总结：</strong> 从上述文献中，我们可以清晰地看到一条技术演进路线：结构生物学正在从依赖 Cryo-EM 和 NMR 解析静态/半动态结构，快速转向<strong>高通量湿实验数据 (如 DMS) 与 AI 深度学习大模型 (如 Transformer) 深度融合的预测范式</strong>。仅仅停留在对一维序列（FASTA）的 PSSM 打分，已经无法捕捉三维空间中的折叠互作逻辑。</p>
+<hr />
+<h3 id="3-迈向空间投影分析-spatial-projection-analysis"><a class="markdownIt-Anchor" href="#3-迈向空间投影分析-spatial-projection-analysis"></a> 📐 3. 迈向空间投影分析 (Spatial Projection Analysis)</h3>
+<p>既然一维序列比对（如 Sequence Logo）存在局限性，我们该如何让 AI 模型更好地理解蛋白质的 3D 拓扑结构？</p>
+<p>导师近期提到了一个非常具有启发性的设想：<strong>空间投影分析 (Spatial Projection Analysis)</strong>。这个设想的核心思路是“降维打击”——将复杂的 3D 蛋白交互界面，转化为成熟的 2D 计算机视觉模型（如 CNN 或 Vision Transformer）能够直接处理的张量。</p>
+<p>假设我们将 SH2/SH3 结构域结合界面的氨基酸残基坐标 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo separator="true">,</mo><mi>z</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(x, y, z)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.04398em;">z</span><span class="mclose">)</span></span></span></span> 提取出来，并通过仿射变换矩阵，将其投影到一个最优的二维观测平面上：</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mrow><mo fence="true">[</mo><mtable rowspacing="0.15999999999999992em" columnspacing="1em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><msup><mi>x</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><msup><mi>y</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup></mstyle></mtd></mtr></mtable><mo fence="true">]</mo></mrow><mo>=</mo><mrow><mo fence="true">[</mo><mtable rowspacing="0.15999999999999992em" columnspacing="1em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><msub><mi>p</mi><mn>11</mn></msub></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><msub><mi>p</mi><mn>12</mn></msub></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><msub><mi>p</mi><mn>13</mn></msub></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><msub><mi>p</mi><mn>21</mn></msub></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><msub><mi>p</mi><mn>22</mn></msub></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><msub><mi>p</mi><mn>23</mn></msub></mstyle></mtd></mtr></mtable><mo fence="true">]</mo></mrow><mrow><mo fence="true">[</mo><mtable rowspacing="0.15999999999999992em" columnspacing="1em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mi>x</mi></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mi>y</mi></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mi>z</mi></mstyle></mtd></mtr></mtable><mo fence="true">]</mo></mrow><mo>+</mo><mrow><mo fence="true">[</mo><mtable rowspacing="0.15999999999999992em" columnspacing="1em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><msub><mi>t</mi><mi>x</mi></msub></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><msub><mi>t</mi><mi>y</mi></msub></mstyle></mtd></mtr></mtable><mo fence="true">]</mo></mrow></mrow><annotation encoding="application/x-tex">\begin{bmatrix} x&#x27; \\ y&#x27; \end{bmatrix} = \begin{bmatrix} p_{11} &amp; p_{12} &amp; p_{13} \\ p_{21} &amp; p_{22} &amp; p_{23} \end{bmatrix} \begin{bmatrix} x \\ y \\ z \end{bmatrix} + \begin{bmatrix} t_x \\ t_y \end{bmatrix}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.40003em;vertical-align:-0.95003em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size3">[</span></span><span class="mord"><span class="mtable"><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.45em;"><span style="top:-3.61em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span></span></span><span style="top:-2.4099999999999997em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9500000000000004em;"><span></span></span></span></span></span></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size3">]</span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:3.6010299999999997em;vertical-align:-1.55002em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size3">[</span></span><span class="mord"><span class="mtable"><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.45em;"><span style="top:-3.61em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-2.4099999999999997em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9500000000000004em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.45em;"><span style="top:-3.61em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-2.4099999999999997em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9500000000000004em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.45em;"><span style="top:-3.61em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mord mtight">3</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-2.4099999999999997em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span><span class="mord mtight">3</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9500000000000004em;"><span></span></span></span></span></span></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size3">]</span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner"><span class="mopen"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.0510099999999998em;"><span style="top:-2.2500000000000004em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎣</span></span></span><span style="top:-2.8099900000000004em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎢</span></span></span><span style="top:-4.05101em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎡</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.55002em;"><span></span></span></span></span></span></span><span class="mord"><span class="mtable"><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-4.21em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">x</span></span></span><span style="top:-3.0099999999999993em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span></span><span style="top:-1.8099999999999994em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.04398em;">z</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.5500000000000007em;"><span></span></span></span></span></span></span></span><span class="mclose"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.0510099999999998em;"><span style="top:-2.2500000000000004em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎦</span></span></span><span style="top:-2.8099900000000004em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎥</span></span></span><span style="top:-4.05101em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎤</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.55002em;"><span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:2.40003em;vertical-align:-0.95003em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size3">[</span></span><span class="mord"><span class="mtable"><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.45em;"><span style="top:-3.61em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">x</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-2.4099999999999997em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">y</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9500000000000004em;"><span></span></span></span></span></span></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size3">]</span></span></span></span></span></span></span></p>
+<p><strong>更激动人心的是特征映射：</strong> 我们可以将投影后的二维网格视为一张数字图像。但这幅图像的 RGB 通道不再是颜色，而是该空间像素点的<strong>物理化学特征</strong>。例如：</p>
+<ul>
+<li><strong>R 通道 (Red):</strong> 局部静电势 (Electrostatic Potential)</li>
+<li><strong>G 通道 (Green):</strong> 疏水性指数 (Hydrophobicity)</li>
+<li><strong>B 通道 (Blue):</strong> 溶剂可及表面积 (SASA)</li>
+</ul>
+<p>对于这个庞大的设想，我计划在下一阶段正式启动底层数据清洗。初步思路是利用 Python 生态来解析 PDB 文件：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># [Lab Sandbox] 提取 SH2 结构域界面原子的伪代码预告</span></span><br><span class="line"><span class="keyword">from</span> Bio.PDB <span class="keyword">import</span> PDBParser</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">parser = PDBParser(PERMISSIVE=<span class="number">1</span>)</span><br><span class="line">structure = parser.get_structure(<span class="string">&quot;SRC_Kinase&quot;</span>, <span class="string">&quot;1y57.pdb&quot;</span>)</span><br><span class="line">model = structure[<span class="number">0</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 定位 SH2 结构域 (通常为 Res 143-248)</span></span><br><span class="line">sh2_residues = [res <span class="keyword">for</span> res <span class="keyword">in</span> model[<span class="string">&#x27;A&#x27;</span>] <span class="keyword">if</span> <span class="number">143</span> &lt;= res.<span class="built_in">id</span>[<span class="number">1</span>] &lt;= <span class="number">248</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 提取特征并构建投影矩阵的过程将在下期详述...</span></span><br></pre></td></tr></table></figure>
+<p>这将会是一个充满挑战的底层算法工程。具体的数学推导、降维平面的法向量求解，以及最终代码的实现，我将在下一篇博客中为你详细拆解。</p>
+<hr />
+<p><em>本文内容同步归档于 <code>CellBioReview</code> GitHub 仓库。欢迎各位生信研究者在评论区或 Issue 中留下您对“空间特征降维”算法的见解！</em></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://galaxy-worlder.github.io">galaxy-worlder</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://galaxy-worlder.github.io/2026/04/29/Kinase-Domain-SH-Review/">https://galaxy-worlder.github.io/2026/04/29/Kinase-Domain-SH-Review/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://galaxy-worlder.github.io" target="_blank">Galaxy Lab</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/CellBioReview/">CellBioReview</a><a class="post-meta__tags" href="/tags/Structural-Biology/">Structural Biology</a><a class="post-meta__tags" href="/tags/Kinase/">Kinase</a><a class="post-meta__tags" href="/tags/SRC/">SRC</a></div><div class="post-share"><div class="social-share" data-image="/img/wallpaper1.png" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related full-width" href="/2026/04/28/Two-Sample-Logo-Analysis/" title="基于 R 与 Python 的序列 Motif 差异可视化 (Two-Sample Logo)"><img class="cover" src="/img/wallpaper.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">基于 R 与 Python 的序列 Motif 差异可视化 (Two-Sample Logo)</div></div><div class="info-2"><div class="info-item-1">在生物信息学分析中，尤其是在激酶结构域（如 SH2, SH3）的底物特异性研究中，传统的 Sequence Logo 只能展示单一数据集的保守性。为了直观地比较前景集 (Foreground) 与背景集 (Background) 之间的氨基酸分布差异，我们需要引入 Two-Sample Logo 算法。  🔬 1. 底层统计学原理 在绘制差异 Logo 之前，我们需要对每个位置的每个氨基酸频率进行假设检验。通常我们使用二项式检验 (Binomial Test) 或 t-检验 (t-test) 来计算 P-value。 如果某一位置的氨基酸 XXX 在前景集中出现的概率为 p1p_1p1​，在背景集中为 p2p_2p2​，其相对富集程度的对数几率可以表示为： LogOdds=log⁡2(p1p2)LogOdds = \log_{2}\left( \frac{p_1}{p_2} \right) LogOdds=log2​(p2​p1​​)  💡 实验室笔记： 只有当 P−value&lt;0.05P-value &lt; 0.05P−value&lt;0.05 时，该氨基酸才会被...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/my-avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">galaxy-worlder</div><div class="author-info-description">A Bioinformatics student exploring AI & Life Sciences.</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">8</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/galaxy-worlder"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">项目成果请看「项目矩阵」，研究关系请看「研究星图」，学习记录请看「实验记录」。</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-src-%E6%BF%80%E9%85%B6%E7%9A%84%E8%87%AA%E6%8A%91%E5%88%B6%E6%9E%84%E8%B1%A1%E4%B8%8E%E7%83%AD%E5%8A%9B%E5%AD%A6%E7%BD%91%E7%BB%9C"><span class="toc-number">1.</span> <span class="toc-text"> 🧬 1. SRC 激酶的自抑制构象与热力学网络</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E8%BF%91%E6%9C%9F%E6%A0%B8%E5%BF%83%E6%96%87%E7%8C%AE%E6%A8%A1%E5%BC%8F%E6%A2%B3%E7%90%86%E4%B8%8E%E8%B6%8B%E5%8A%BF%E7%A0%94%E5%88%A4"><span class="toc-number">2.</span> <span class="toc-text"> 📊 2. 近期核心文献模式梳理与趋势研判</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E8%BF%88%E5%90%91%E7%A9%BA%E9%97%B4%E6%8A%95%E5%BD%B1%E5%88%86%E6%9E%90-spatial-projection-analysis"><span class="toc-number">3.</span> <span class="toc-text"> 📐 3. 迈向空间投影分析 (Spatial Projection Analysis)</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/04/29/Kinase-Domain-SH-Review/" title="激酶结构域追踪：近期顶级期刊中的 SH1/SH2/SH3 互作模式解析"><img src="/img/wallpaper1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="激酶结构域追踪：近期顶级期刊中的 SH1/SH2/SH3 互作模式解析"/></a><div class="content"><a class="title" href="/2026/04/29/Kinase-Domain-SH-Review/" title="激酶结构域追踪：近期顶级期刊中的 SH1/SH2/SH3 互作模式解析">激酶结构域追踪：近期顶级期刊中的 SH1/SH2/SH3 互作模式解析</a><time datetime="2026-04-29T08:00:00.000Z" title="发表于 2026-04-29 16:00:00">2026-04-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/04/28/Two-Sample-Logo-Analysis/" title="基于 R 与 Python 的序列 Motif 差异可视化 (Two-Sample Logo)"><img src="/img/wallpaper.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="基于 R 与 Python 的序列 Motif 差异可视化 (Two-Sample Logo)"/></a><div class="content"><a class="title" href="/2026/04/28/Two-Sample-Logo-Analysis/" title="基于 R 与 Python 的序列 Motif 差异可视化 (Two-Sample Logo)">基于 R 与 Python 的序列 Motif 差异可视化 (Two-Sample Logo)</a><time datetime="2026-04-28T02:00:00.000Z" title="发表于 2026-04-28 10:00:00">2026-04-28</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(/img/wallpaper.jpg);"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By galaxy-worlder</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.1</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.4</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><div class="js-pjax"><script>(async () => {
+  const showKatex = () => {
+    document.querySelectorAll('#article-container .katex').forEach(el => el.classList.add('katex-show'))
+  }
+
+  if (!window.katex_js_css) {
+    window.katex_js_css = true
+    await btf.getCSS('https://cdn.jsdelivr.net/npm/katex@0.16.28/dist/katex.min.css')
+    if (false) {
+      await btf.getScript('https://cdn.jsdelivr.net/npm/katex@0.16.28/dist/contrib/copy-tex.min.js')
+    }
+  }
+
+  showKatex()
+})()</script></div><script src="https://cubism.live2d.com/sdk-web/cubismcore/live2dcubismcore.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pixi.js@6.5.2/dist/browser/pixi.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pixi-live2d-display/dist/cubism4.min.js"></script><script>
+  // 动态网页标签标题特效
+  var OriginTitle = document.title;
+  var titleTime;
+  document.addEventListener('visibilitychange', function () {
+    if (document.hidden) {
+      document.title = '🚨 404 实验室连接中断...';
+      clearTimeout(titleTime);
+    } else {
+      document.title = '📡 信号恢复！' + OriginTitle;
+      titleTime = setTimeout(function () {
+        document.title = OriginTitle;
+      }, 2000);
+    }
+  });
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', async function () {
+    console.log("🚀 滴滴滴！Live2D 召唤脚本已成功潜入页面！");
+    
+    const canvas = document.createElement('canvas');
+    canvas.id = 'my-live2d-canvas';
+    canvas.style.position = 'fixed';
+    canvas.style.right = '0px';
+    canvas.style.bottom = '0px';
+    canvas.style.width = '220px';  // 缩小了宽度
+    canvas.style.height = '300px'; // 缩小了高度
+    canvas.style.zIndex = '99999';
+    canvas.style.pointerEvents = 'none';
+    document.body.appendChild(canvas);
+
+    const app = new PIXI.Application({
+        view: canvas,
+        transparent: true,
+        autoStart: true,
+        resizeTo: canvas
+    });
+
+    const modelUrl = '/live2d_models/LSS/LSS.model3.json';
+
+    try {
+        console.log("⏳ 正在请求模型数据: " + modelUrl);
+        const model = await PIXI.live2d.Live2DModel.from(modelUrl);
+        app.stage.addChild(model);
+
+        const scaleX = canvas.width / model.width;
+        const scaleY = canvas.height / model.height;
+        // 缩放倍率从 1.5 降到了 1.15
+        model.scale.set(Math.min(scaleX, scaleY) * 1.15); 
+        model.x = canvas.width / 2 - model.width / 2;
+        // 微调了 y 轴的偏移量让模型贴合屏幕底部
+        model.y = canvas.height - model.height + 20; 
+
+        model.interactive = true;
+        model.on('pointertap', () => {
+            model.motion('Tap');
+        });
+        console.log("✅ kewei_6 成功降临！");
+    } catch (e) {
+        console.error("❌ kewei_6 召唤失败啦: ", e);
+    }
+  });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="local-search-input"><input placeholder="搜索生信、AI、蛋白质组学笔记..." type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=5.5.4"></script></div></div></body></html>

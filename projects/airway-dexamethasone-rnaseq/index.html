@@ -1,0 +1,338 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Airway Dexamethasone RNA-seq | Galaxy Lab</title><meta name="author" content="galaxy-worlder"><meta name="copyright" content="galaxy-worlder"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0d0d"><meta name="description" content="GALAXY LAB &#x2F;&#x2F; BIOINFORMATICS PROJECT Airway Dexamethasone RNA-seq 地塞米松处理是否会改变人气道平滑肌细胞的基因表达？  这是一个基于公开 RNA-seq 数据集 airway 的差异表达分析项目。 项目以 dexamethasone 处理前后的人气道平滑肌细胞为研究对象，使用 DESeq2 分析处理组与未处理组之间的基因表达变化">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Airway Dexamethasone RNA-seq">
+<meta property="og:url" content="https://galaxy-worlder.github.io/projects/airway-dexamethasone-rnaseq/index.html">
+<meta property="og:site_name" content="Galaxy Lab">
+<meta property="og:description" content="GALAXY LAB &#x2F;&#x2F; BIOINFORMATICS PROJECT Airway Dexamethasone RNA-seq 地塞米松处理是否会改变人气道平滑肌细胞的基因表达？  这是一个基于公开 RNA-seq 数据集 airway 的差异表达分析项目。 项目以 dexamethasone 处理前后的人气道平滑肌细胞为研究对象，使用 DESeq2 分析处理组与未处理组之间的基因表达变化">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://galaxy-worlder.github.io/img/my-avatar.jpg">
+<meta property="article:published_time" content="2026-05-03T16:00:00.000Z">
+<meta property="article:modified_time" content="2026-05-04T09:49:29.034Z">
+<meta property="article:author" content="galaxy-worlder">
+<meta property="article:tag" content="Bioinformatics, AI, Live2D">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://galaxy-worlder.github.io/img/my-avatar.jpg"><script type="application/ld+json"></script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://galaxy-worlder.github.io/projects/airway-dexamethasone-rnaseq/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.4"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":2,"unescape":true,"pagination":{"enable":false,"hitsPerPage":8},"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Airway Dexamethasone RNA-seq',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'page'
+}</script><style>#aside-sidebar .card-widget, #post, .layout > .recent-posts > .recent-post-item { background: rgba(25, 25, 25, 0.75) !important; backdrop-filter: blur(10px) saturate(150%); border: 1px solid rgba(255, 255, 255, 0.1); }</style><link rel="stylesheet" href="/css/galaxy-command.css"><link rel="stylesheet" href="/css/project-page.css"><link rel="stylesheet" href="/css/research-galaxy.css"><meta name="generator" content="Hexo 8.1.1"></head><body><div class="bg-animation" id="web_bg" style="background-image: url(/img/wallpaper.jpg);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/my-avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">8</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-satellite-dish"></i><span> 🛰️ 指挥中心</span></a></div><div class="menus_item"><a class="site-page" href="/projects/"><i class="fa-fw fas fa-flask"></i><span> 🔬 项目矩阵</span></a></div><div class="menus_item"><a class="site-page" href="/research-galaxy/"><i class="fa-fw fas fa-star"></i><span> 🌌 研究星图</span></a></div><div class="menus_item"><a class="site-page" href="/notes/"><i class="fa-fw fas fa-vial"></i><span> 🧪 实验记录</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://github.com/galaxy-worlder"><i class="fa-fw fab fa-github"></i><span> GitHub</span></a></div></div></div></div><div class="page type-project" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Galaxy Lab</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-satellite-dish"></i><span> 🛰️ 指挥中心</span></a></div><div class="menus_item"><a class="site-page" href="/projects/"><i class="fa-fw fas fa-flask"></i><span> 🔬 项目矩阵</span></a></div><div class="menus_item"><a class="site-page" href="/research-galaxy/"><i class="fa-fw fas fa-star"></i><span> 🌌 研究星图</span></a></div><div class="menus_item"><a class="site-page" href="/notes/"><i class="fa-fw fas fa-vial"></i><span> 🧪 实验记录</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://github.com/galaxy-worlder"><i class="fa-fw fab fa-github"></i><span> GitHub</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><h1 class="title-seo">Airway Dexamethasone RNA-seq</h1></header><main class="layout hide-aside" id="content-inner"><div id="page"><div class="page-title">Airway Dexamethasone RNA-seq</div><div class="container" id="article-container"><link rel="stylesheet" href="/css/project-page.css">
+<div class="project-hero-card">
+<div class="project-kicker">GALAXY LAB // BIOINFORMATICS PROJECT</div>
+<h1>Airway Dexamethasone RNA-seq</h1>
+<p><strong>地塞米松处理是否会改变人气道平滑肌细胞的基因表达？</strong></p>
+<p>
+这是一个基于公开 RNA-seq 数据集 <code>airway</code> 的差异表达分析项目。
+项目以 dexamethasone 处理前后的人气道平滑肌细胞为研究对象，使用 DESeq2 分析处理组与未处理组之间的基因表达变化，并进一步通过 GO 与 KEGG 富集分析解释差异基因背后的生物学意义。
+</p>
+<div class="project-action-row">
+<a class="project-main-btn" href="https://github.com/galaxy-worlder/airway-dexamethasone-rnaseq" target="_blank" rel="noopener">
+    查看 GitHub 仓库 →
+</a>
+</div>
+</div>
+<hr />
+<h2 id="project-overview"><a class="markdownIt-Anchor" href="#project-overview"></a> Project Overview</h2>
+<p>本项目关注的核心问题是：</p>
+<blockquote>
+<p>dexamethasone 处理是否会改变人气道平滑肌细胞的转录组状态？如果会，哪些基因和生物学过程受到影响？</p>
+</blockquote>
+<p>项目不是单纯运行一个 RNA-seq 流程，而是围绕一次完整的小型科研实践展开：</p>
+<ul>
+<li>理解 RNA-seq count matrix 与样本信息；</li>
+<li>根据实验设计选择合适的 DESeq2 分析流程；</li>
+<li>学习 <code>log2FoldChange</code>、<code>pvalue</code>、<code>padj</code> 的解释；</li>
+<li>使用 PCA、MA plot、volcano plot、heatmap 展示分析结果；</li>
+<li>使用 GO 和 KEGG 富集分析解释差异基因的生物学意义；</li>
+<li>将分析代码、结果表格和可视化图片整理为可复现项目。</li>
+</ul>
+<hr />
+<h2 id="dataset-design"><a class="markdownIt-Anchor" href="#dataset-design"></a> Dataset &amp; Design</h2>
+<div class="project-info-grid">
+<div class="project-info-card">
+<div class="project-info-label">Dataset</div>
+<div class="project-info-value">airway</div>
+</div>
+<div class="project-info-card">
+<div class="project-info-label">Data Type</div>
+<div class="project-info-value">RNA-seq read counts</div>
+</div>
+<div class="project-info-card">
+<div class="project-info-label">Sample Type</div>
+<div class="project-info-value">Human airway smooth muscle cells</div>
+</div>
+<div class="project-info-card">
+<div class="project-info-label">Main Method</div>
+<div class="project-info-value">DESeq2</div>
+</div>
+</div>
+<p>本项目使用公开 <code>airway</code> RNA-seq 数据集，以 dexamethasone 处理前后的人气道平滑肌细胞为研究对象，分析处理组与未处理组之间的基因表达差异。</p>
+<hr />
+<h2 id="analysis-pipeline"><a class="markdownIt-Anchor" href="#analysis-pipeline"></a> Analysis Pipeline</h2>
+<div class="project-timeline">
+<div class="project-step">
+<span>01</span>
+<strong>Load RNA-seq count data</strong>
+<p>读取 airway 数据集，整理 count matrix 与样本分组信息。</p>
+</div>
+<div class="project-step">
+<span>02</span>
+<strong>Filter low-expression genes</strong>
+<p>过滤低表达基因，减少噪声对差异分析的影响。</p>
+</div>
+<div class="project-step">
+<span>03</span>
+<strong>Differential expression analysis</strong>
+<p>使用 DESeq2 进行 dexamethasone 处理组与未处理组之间的差异表达分析。</p>
+</div>
+<div class="project-step">
+<span>04</span>
+<strong>Visualization</strong>
+<p>输出 PCA、MA plot、volcano plot 和 top gene heatmap，用于展示样本分布和差异基因特征。</p>
+</div>
+<div class="project-step">
+<span>05</span>
+<strong>Functional enrichment</strong>
+<p>对上调和下调基因分别进行 GO Biological Process 与 KEGG pathway 富集分析。</p>
+</div>
+</div>
+<hr />
+<h2 id="main-findings"><a class="markdownIt-Anchor" href="#main-findings"></a> Main Findings</h2>
+<p>本项目的综合解释是：</p>
+<blockquote>
+<p>dexamethasone 处理可能激活气道平滑肌细胞中的激素响应、结构 / 骨架 / 基质相关基因，同时抑制炎症因子、受体信号、细胞通讯和部分形态 / 迁移相关通路，说明其对气道平滑肌细胞转录状态具有系统性影响。</p>
+</blockquote>
+<p>具体来说：</p>
+<ul>
+<li>上调基因更倾向于富集在细胞外基质组织、肌肉系统过程、细胞-基质黏附和糖皮质激素响应相关过程；</li>
+<li>下调基因更倾向于涉及细胞因子通讯、炎症介质调控、钙信号、cAMP 信号和受体配体信号；</li>
+<li>差异表达结果提示 dexamethasone 对气道平滑肌细胞的基因表达具有明显调控作用。</li>
+</ul>
+<hr />
+<h2 id="skills-demonstrated"><a class="markdownIt-Anchor" href="#skills-demonstrated"></a> Skills Demonstrated</h2>
+<div class="project-tag-panel">
+<span>RNA-seq</span>
+<span>DESeq2</span>
+<span>Bioinformatics</span>
+<span>Differential Expression</span>
+<span>GO Enrichment</span>
+<span>KEGG Pathway</span>
+<span>R</span>
+<span>Reproducible Research</span>
+</div>
+<hr />
+<h2 id="repository"><a class="markdownIt-Anchor" href="#repository"></a> Repository</h2>
+<p>项目代码、结果表格和分析说明已整理在 GitHub：</p>
+<a class="project-main-btn" href="https://github.com/galaxy-worlder/airway-dexamethasone-rnaseq" target="_blank" rel="noopener">
+Open Repository →
+</a>
+</div></div></main><footer id="footer" style="background-image: url(/img/wallpaper.jpg);"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By galaxy-worlder</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.1</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.4</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><div class="js-pjax"><script>(async () => {
+  const showKatex = () => {
+    document.querySelectorAll('#article-container .katex').forEach(el => el.classList.add('katex-show'))
+  }
+
+  if (!window.katex_js_css) {
+    window.katex_js_css = true
+    await btf.getCSS('https://cdn.jsdelivr.net/npm/katex@0.16.28/dist/katex.min.css')
+    if (false) {
+      await btf.getScript('https://cdn.jsdelivr.net/npm/katex@0.16.28/dist/contrib/copy-tex.min.js')
+    }
+  }
+
+  showKatex()
+})()</script></div><script src="https://cubism.live2d.com/sdk-web/cubismcore/live2dcubismcore.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pixi.js@6.5.2/dist/browser/pixi.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pixi-live2d-display/dist/cubism4.min.js"></script><script>
+  // 动态网页标签标题特效
+  var OriginTitle = document.title;
+  var titleTime;
+  document.addEventListener('visibilitychange', function () {
+    if (document.hidden) {
+      document.title = '🚨 404 实验室连接中断...';
+      clearTimeout(titleTime);
+    } else {
+      document.title = '📡 信号恢复！' + OriginTitle;
+      titleTime = setTimeout(function () {
+        document.title = OriginTitle;
+      }, 2000);
+    }
+  });
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', async function () {
+    console.log("🚀 滴滴滴！Live2D 召唤脚本已成功潜入页面！");
+    
+    const canvas = document.createElement('canvas');
+    canvas.id = 'my-live2d-canvas';
+    canvas.style.position = 'fixed';
+    canvas.style.right = '0px';
+    canvas.style.bottom = '0px';
+    canvas.style.width = '220px';  // 缩小了宽度
+    canvas.style.height = '300px'; // 缩小了高度
+    canvas.style.zIndex = '99999';
+    canvas.style.pointerEvents = 'none';
+    document.body.appendChild(canvas);
+
+    const app = new PIXI.Application({
+        view: canvas,
+        transparent: true,
+        autoStart: true,
+        resizeTo: canvas
+    });
+
+    const modelUrl = '/live2d_models/LSS/LSS.model3.json';
+
+    try {
+        console.log("⏳ 正在请求模型数据: " + modelUrl);
+        const model = await PIXI.live2d.Live2DModel.from(modelUrl);
+        app.stage.addChild(model);
+
+        const scaleX = canvas.width / model.width;
+        const scaleY = canvas.height / model.height;
+        // 缩放倍率从 1.5 降到了 1.15
+        model.scale.set(Math.min(scaleX, scaleY) * 1.15); 
+        model.x = canvas.width / 2 - model.width / 2;
+        // 微调了 y 轴的偏移量让模型贴合屏幕底部
+        model.y = canvas.height - model.height + 20; 
+
+        model.interactive = true;
+        model.on('pointertap', () => {
+            model.motion('Tap');
+        });
+        console.log("✅ kewei_6 成功降临！");
+    } catch (e) {
+        console.error("❌ kewei_6 召唤失败啦: ", e);
+    }
+  });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="local-search-input"><input placeholder="搜索生信、AI、蛋白质组学笔记..." type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=5.5.4"></script></div></div></body></html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Galaxy Lab | Galaxy Lab</title><meta name="author" content="galaxy-worlder"><meta name="copyright" content="galaxy-worlder"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0d0d"><meta name="description" content="GALAXY LAB &#x2F;&#x2F; COMMAND CENTER Galaxy Command Center  AI × Bioinformatics × Proteomics × Digital Laboratory   这里是我的个人数字实验室入口。首页只保留最重要的四个方向：项目矩阵、研究星图、实验记录和 GitHub， 让访问者可以快速理解我正在做什么、已经完成了什么，以及不同研究方向之间如">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Galaxy Lab">
+<meta property="og:url" content="https://galaxy-worlder.github.io/index.html">
+<meta property="og:site_name" content="Galaxy Lab">
+<meta property="og:description" content="GALAXY LAB &#x2F;&#x2F; COMMAND CENTER Galaxy Command Center  AI × Bioinformatics × Proteomics × Digital Laboratory   这里是我的个人数字实验室入口。首页只保留最重要的四个方向：项目矩阵、研究星图、实验记录和 GitHub， 让访问者可以快速理解我正在做什么、已经完成了什么，以及不同研究方向之间如">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://galaxy-worlder.github.io/img/my-avatar.jpg">
+<meta property="article:published_time" content="2026-05-03T16:00:00.000Z">
+<meta property="article:modified_time" content="2026-05-04T09:43:48.204Z">
+<meta property="article:author" content="galaxy-worlder">
+<meta property="article:tag" content="Bioinformatics, AI, Live2D">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://galaxy-worlder.github.io/img/my-avatar.jpg"><script type="application/ld+json"></script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://galaxy-worlder.github.io/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.4"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":2,"unescape":true,"pagination":{"enable":false,"hitsPerPage":8},"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Galaxy Lab',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'page'
+}</script><style>#aside-sidebar .card-widget, #post, .layout > .recent-posts > .recent-post-item { background: rgba(25, 25, 25, 0.75) !important; backdrop-filter: blur(10px) saturate(150%); border: 1px solid rgba(255, 255, 255, 0.1); }</style><link rel="stylesheet" href="/css/galaxy-command.css"><link rel="stylesheet" href="/css/project-page.css"><link rel="stylesheet" href="/css/research-galaxy.css"><meta name="generator" content="Hexo 8.1.1"></head><body><div class="bg-animation" id="web_bg" style="background-image: url(/img/wallpaper.jpg);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/my-avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">8</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-satellite-dish"></i><span> 🛰️ 指挥中心</span></a></div><div class="menus_item"><a class="site-page" href="/projects/"><i class="fa-fw fas fa-flask"></i><span> 🔬 项目矩阵</span></a></div><div class="menus_item"><a class="site-page" href="/research-galaxy/"><i class="fa-fw fas fa-star"></i><span> 🌌 研究星图</span></a></div><div class="menus_item"><a class="site-page" href="/notes/"><i class="fa-fw fas fa-vial"></i><span> 🧪 实验记录</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://github.com/galaxy-worlder"><i class="fa-fw fab fa-github"></i><span> GitHub</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Galaxy Lab</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-satellite-dish"></i><span> 🛰️ 指挥中心</span></a></div><div class="menus_item"><a class="site-page" href="/projects/"><i class="fa-fw fas fa-flask"></i><span> 🔬 项目矩阵</span></a></div><div class="menus_item"><a class="site-page" href="/research-galaxy/"><i class="fa-fw fas fa-star"></i><span> 🌌 研究星图</span></a></div><div class="menus_item"><a class="site-page" href="/notes/"><i class="fa-fw fas fa-vial"></i><span> 🧪 实验记录</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://github.com/galaxy-worlder"><i class="fa-fw fab fa-github"></i><span> GitHub</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><h1 class="title-seo">Galaxy Lab</h1></header><main class="layout hide-aside" id="content-inner"><div id="page"><div class="page-title">Galaxy Lab</div><div class="container" id="article-container"><link rel="stylesheet" href="/css/galaxy-command.css">
+<div class="galaxy-command">
+<section class="gc-hero">
+<div class="gc-kicker">GALAXY LAB // COMMAND CENTER</div>
+<h1>Galaxy Command Center</h1>
+<p class="gc-subtitle">
+AI × Bioinformatics × Proteomics × Digital Laboratory
+</p>
+<p class="gc-intro">
+这里是我的个人数字实验室入口。首页只保留最重要的四个方向：项目矩阵、研究星图、实验记录和 GitHub，
+让访问者可以快速理解我正在做什么、已经完成了什么，以及不同研究方向之间如何连接。
+</p>
+<div class="gc-actions">
+<a href="/projects/" class="gc-btn primary">进入项目矩阵</a>
+<a href="/research-galaxy/" class="gc-btn">查看研究星图</a>
+<a href="/notes/" class="gc-btn">阅读实验记录</a>
+<a href="https://github.com/galaxy-worlder" target="_blank" rel="noopener" class="gc-btn">GitHub</a>
+</div>
+</section>
+<section class="gc-grid">
+<div class="gc-card gc-card-wide">
+<div class="gc-card-header">
+<span>01</span>
+<h2>当前研究主线</h2>
+</div>
+<div class="gc-tags">
+<span>RNA-seq Differential Expression</span>
+<span>Proteomics Rescoring</span>
+<span>Sequence Motif Visualization</span>
+<span>Medical AI Agent</span>
+<span>Live2D Virtual Lab</span>
+</div>
+<p>
+当前主线围绕 AI 与生命科学交叉展开：一方面推进 RNA-seq、生信可视化和蛋白质组学模型优化，
+另一方面构建具有个人辨识度的 Galaxy Lab 数字实验室界面。
+</p>
+</div>
+<div class="gc-card">
+<div class="gc-card-header">
+<span>02</span>
+<h2>项目矩阵</h2>
+</div>
+<ul class="gc-list">
+<li><a href="/projects/airway-dexamethasone-rnaseq/"><strong>Airway Dexamethasone RNA-seq</strong><em>DESeq2 / GO / KEGG</em></a></li>
+<li><a href="/projects/#psm-rescoring"><strong>PSM Rescoring</strong><em>Proteomics Model</em></a></li>
+<li><a href="/projects/#two-sample-logo"><strong>Two-Sample Logo</strong><em>Motif Visualization</em></a></li>
+<li><a href="/projects/#kewei-6"><strong>Kewei_6</strong><em>Virtual Lab Assistant</em></a></li>
+<li><a href="/projects/#medical-ai-agent"><strong>Medical AI Agent</strong><em>Multimodal Medical AI</em></a></li>
+</ul>
+<p><a href="/projects/" class="gc-link">查看完整项目矩阵 →</a></p>
+</div>
+<div class="gc-card">
+<div class="gc-card-header">
+<span>03</span>
+<h2>研究星图</h2>
+</div>
+<p>
+星图不再作为唯一导航入口，而是作为研究关系图：它连接方向、项目、技术栈和文章记录，帮助理解这些内容之间的关联。
+</p>
+<p><a href="/research-galaxy/" class="gc-link">进入研究星图 →</a></p>
+</div>
+<div class="gc-card">
+<div class="gc-card-header">
+<span>04</span>
+<h2>实验记录</h2>
+</div>
+<ul class="gc-list">
+<li><a href="/2026/04/28/Two-Sample-Logo-Analysis/"><strong>Two-Sample Logo Analysis</strong><em>Bioinformatics / Motif</em></a></li>
+<li><a href="/2026/04/29/Kinase-Domain-SH-Review/"><strong>Kinase Domain SH Review</strong><em>Structural Biology</em></a></li>
+</ul>
+<p><a href="/notes/" class="gc-link">进入实验记录 →</a></p>
+</div>
+<div class="gc-card">
+<div class="gc-card-header">
+<span>05</span>
+<h2>外部入口</h2>
+</div>
+<div class="gc-shortcuts">
+<a href="https://github.com/galaxy-worlder" target="_blank" rel="noopener">GitHub</a>
+<a href="/projects/">Projects</a>
+<a href="/notes/">Notes</a>
+<a href="/research-galaxy/">Galaxy</a>
+</div>
+</div>
+</section>
+</div>
+</div></div></main><footer id="footer" style="background-image: url(/img/wallpaper.jpg);"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By galaxy-worlder</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.1</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.4</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><div class="js-pjax"><script>(async () => {
+  const showKatex = () => {
+    document.querySelectorAll('#article-container .katex').forEach(el => el.classList.add('katex-show'))
+  }
+
+  if (!window.katex_js_css) {
+    window.katex_js_css = true
+    await btf.getCSS('https://cdn.jsdelivr.net/npm/katex@0.16.28/dist/katex.min.css')
+    if (false) {
+      await btf.getScript('https://cdn.jsdelivr.net/npm/katex@0.16.28/dist/contrib/copy-tex.min.js')
+    }
+  }
+
+  showKatex()
+})()</script></div><script src="https://cubism.live2d.com/sdk-web/cubismcore/live2dcubismcore.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pixi.js@6.5.2/dist/browser/pixi.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pixi-live2d-display/dist/cubism4.min.js"></script><script>
+  // 动态网页标签标题特效
+  var OriginTitle = document.title;
+  var titleTime;
+  document.addEventListener('visibilitychange', function () {
+    if (document.hidden) {
+      document.title = '🚨 404 实验室连接中断...';
+      clearTimeout(titleTime);
+    } else {
+      document.title = '📡 信号恢复！' + OriginTitle;
+      titleTime = setTimeout(function () {
+        document.title = OriginTitle;
+      }, 2000);
+    }
+  });
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', async function () {
+    console.log("🚀 滴滴滴！Live2D 召唤脚本已成功潜入页面！");
+    
+    const canvas = document.createElement('canvas');
+    canvas.id = 'my-live2d-canvas';
+    canvas.style.position = 'fixed';
+    canvas.style.right = '0px';
+    canvas.style.bottom = '0px';
+    canvas.style.width = '220px';  // 缩小了宽度
+    canvas.style.height = '300px'; // 缩小了高度
+    canvas.style.zIndex = '99999';
+    canvas.style.pointerEvents = 'none';
+    document.body.appendChild(canvas);
+
+    const app = new PIXI.Application({
+        view: canvas,
+        transparent: true,
+        autoStart: true,
+        resizeTo: canvas
+    });
+
+    const modelUrl = '/live2d_models/LSS/LSS.model3.json';
+
+    try {
+        console.log("⏳ 正在请求模型数据: " + modelUrl);
+        const model = await PIXI.live2d.Live2DModel.from(modelUrl);
+        app.stage.addChild(model);
+
+        const scaleX = canvas.width / model.width;
+        const scaleY = canvas.height / model.height;
+        // 缩放倍率从 1.5 降到了 1.15
+        model.scale.set(Math.min(scaleX, scaleY) * 1.15); 
+        model.x = canvas.width / 2 - model.width / 2;
+        // 微调了 y 轴的偏移量让模型贴合屏幕底部
+        model.y = canvas.height - model.height + 20; 
+
+        model.interactive = true;
+        model.on('pointertap', () => {
+            model.motion('Tap');
+        });
+        console.log("✅ kewei_6 成功降临！");
+    } catch (e) {
+        console.error("❌ kewei_6 召唤失败啦: ", e);
+    }
+  });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="local-search-input"><input placeholder="搜索生信、AI、蛋白质组学笔记..." type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=5.5.4"></script></div></div></body></html>

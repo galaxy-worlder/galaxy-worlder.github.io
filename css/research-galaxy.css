@@ -1,0 +1,256 @@
+/* Research Galaxy 3D */
+
+#page {
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+.layout {
+  max-width: 1380px;
+}
+
+.research-galaxy-3d-page {
+  --rg-bg: rgba(8, 12, 26, 0.78);
+  --rg-card: rgba(10, 16, 34, 0.78);
+  --rg-border: rgba(130, 180, 255, 0.24);
+  --rg-text: rgba(255, 255, 255, 0.94);
+  --rg-muted: rgba(220, 230, 255, 0.68);
+  --rg-blue: #73d7ff;
+  --rg-purple: #a78bfa;
+  --rg-green: #5eead4;
+
+  color: var(--rg-text);
+  padding: 1rem 0 3rem;
+}
+
+/* ===== 页面切换为宇宙背景 ===== */
+body.research-galaxy-theme #page-header {
+  background-image:
+    linear-gradient(rgba(4, 8, 20, 0.45), rgba(4, 8, 20, 0.72)),
+    url("/img/bg/research-galaxy-space.png") !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+}
+
+body.research-galaxy-theme #web_bg {
+  background-image:
+    linear-gradient(rgba(2, 6, 18, 0.68), rgba(2, 6, 18, 0.82)),
+    url("/img/bg/research-galaxy-space.png") !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  filter: brightness(0.72) saturate(1.08);
+}
+
+body.research-galaxy-theme #footer::before,
+body.research-galaxy-theme #page-header::before {
+  background: transparent !important;
+}
+
+.rg3d-hero {
+  margin-bottom: 1.1rem;
+  padding: 3.2rem 2rem;
+  border: 1px solid var(--rg-border);
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at 16% 22%, rgba(115, 215, 255, 0.24), transparent 34%),
+    radial-gradient(circle at 84% 12%, rgba(167, 139, 250, 0.22), transparent 36%),
+    linear-gradient(135deg, rgba(12, 18, 38, 0.85), rgba(6, 10, 24, 0.72));
+  backdrop-filter: blur(16px) saturate(150%);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.32);
+}
+
+.rg3d-kicker {
+  display: inline-flex;
+  margin-bottom: 1rem;
+  padding: 0.45rem 0.8rem;
+  border: 1px solid rgba(115, 215, 255, 0.3);
+  border-radius: 999px;
+  color: var(--rg-blue);
+  background: rgba(115, 215, 255, 0.08);
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  font-weight: 800;
+}
+
+.rg3d-hero h1 {
+  margin: 0;
+  font-size: clamp(2.4rem, 6vw, 5.2rem);
+  line-height: 1;
+  letter-spacing: -0.05em;
+  background: linear-gradient(90deg, #ffffff, #9ee7ff, #c4b5fd);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.rg3d-hero p {
+  max-width: 780px;
+  margin-top: 1rem;
+  color: var(--rg-muted);
+  line-height: 1.85;
+  font-size: 1rem;
+}
+
+.rg3d-shell {
+  display: grid;
+  grid-template-columns: minmax(0, 1.75fr) minmax(320px, 0.85fr);
+  gap: 1.1rem;
+}
+
+.rg3d-graph-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 720px;
+  border: 1px solid var(--rg-border);
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at center, rgba(115, 215, 255, 0.16), transparent 30%),
+    radial-gradient(circle at 80% 30%, rgba(167, 139, 250, 0.14), transparent 28%),
+    linear-gradient(135deg, rgba(7, 11, 24, 0.92), rgba(2, 5, 14, 0.96));
+  backdrop-filter: blur(16px) saturate(150%);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.3);
+}
+
+.rg3d-graph-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle, rgba(255,255,255,0.7) 1px, transparent 1.6px),
+    radial-gradient(circle, rgba(115,215,255,0.5) 1px, transparent 1.8px);
+  background-size: 74px 74px, 132px 132px;
+  background-position: 0 0, 34px 46px;
+  opacity: 0.18;
+  pointer-events: none;
+  z-index: 1;
+}
+
+#research-galaxy-3d {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 720px;
+}
+
+#research-galaxy-3d canvas {
+  border-radius: 28px;
+}
+
+.rg3d-panel {
+  position: sticky;
+  top: 92px;
+  align-self: start;
+  padding: 1.5rem;
+  border: 1px solid var(--rg-border);
+  border-radius: 28px;
+  background: var(--rg-card);
+  backdrop-filter: blur(16px) saturate(150%);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
+}
+
+.rg3d-panel-label {
+  margin-bottom: 0.8rem;
+  color: var(--rg-blue);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+.rg3d-panel h2 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.rg3d-panel p {
+  color: var(--rg-muted);
+  line-height: 1.8;
+}
+
+.rg3d-meta {
+  display: grid;
+  gap: 0.75rem;
+  margin: 1.2rem 0;
+}
+
+.rg3d-meta div {
+  padding: 0.8rem;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 16px;
+  background: rgba(255,255,255,0.06);
+}
+
+.rg3d-meta span {
+  display: block;
+  margin-bottom: 0.2rem;
+  color: var(--rg-muted);
+  font-size: 0.78rem;
+}
+
+.rg3d-meta strong {
+  color: var(--rg-text);
+}
+
+.rg3d-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0 1.2rem;
+}
+
+.rg3d-tags span {
+  padding: 0.42rem 0.68rem;
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 999px;
+  background: rgba(255,255,255,0.07);
+  color: rgba(255,255,255,0.86);
+  font-size: 0.84rem;
+}
+
+.rg3d-link {
+  display: inline-flex;
+  width: 100%;
+  justify-content: center;
+  padding: 0.85rem 1rem;
+  border-radius: 999px;
+  color: #06101f !important;
+  background: linear-gradient(135deg, var(--rg-blue), var(--rg-green));
+  text-decoration: none !important;
+  font-weight: 900;
+}
+
+@media screen and (max-width: 900px) {
+  .rg3d-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .rg3d-panel {
+    position: relative;
+    top: auto;
+  }
+
+  .rg3d-graph-card {
+    min-height: 560px;
+  }
+
+  #research-galaxy-3d {
+    height: 560px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .rg3d-hero {
+    padding: 2.4rem 1.2rem;
+    border-radius: 22px;
+  }
+
+  .rg3d-graph-card {
+    min-height: 500px;
+  }
+
+  #research-galaxy-3d {
+    height: 500px;
+  }
+}

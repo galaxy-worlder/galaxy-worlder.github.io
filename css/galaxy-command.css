@@ -1,0 +1,318 @@
+/* Galaxy Command Center */
+
+.layout {
+  max-width: 1280px;
+}
+
+#page {
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+.galaxy-command {
+  --gc-bg: rgba(10, 14, 28, 0.72);
+  --gc-border: rgba(130, 180, 255, 0.22);
+  --gc-text: rgba(255, 255, 255, 0.92);
+  --gc-muted: rgba(220, 230, 255, 0.68);
+  --gc-blue: #73d7ff;
+  --gc-purple: #a78bfa;
+  --gc-green: #5eead4;
+
+  color: var(--gc-text);
+  padding: 1rem 0 3rem;
+}
+
+.gc-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 4.5rem 2rem;
+  border: 1px solid var(--gc-border);
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(115, 215, 255, 0.22), transparent 32%),
+    radial-gradient(circle at 80% 10%, rgba(167, 139, 250, 0.22), transparent 36%),
+    linear-gradient(135deg, rgba(12, 18, 38, 0.88), rgba(6, 10, 24, 0.78));
+  backdrop-filter: blur(16px) saturate(150%);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.32);
+}
+
+.gc-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.045) 1px, transparent 1px);
+  background-size: 42px 42px;
+  mask-image: linear-gradient(to bottom, black, transparent 85%);
+  pointer-events: none;
+}
+
+.gc-hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.gc-kicker {
+  display: inline-flex;
+  margin-bottom: 1.2rem;
+  padding: 0.45rem 0.8rem;
+  border: 1px solid rgba(115, 215, 255, 0.28);
+  border-radius: 999px;
+  color: var(--gc-blue);
+  background: rgba(115, 215, 255, 0.08);
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+}
+
+.gc-hero h1 {
+  margin: 0;
+  font-size: clamp(2.6rem, 7vw, 5.8rem);
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+  background: linear-gradient(90deg, #ffffff, #9ee7ff, #c4b5fd);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.gc-subtitle {
+  margin-top: 1.1rem;
+  font-size: clamp(1.05rem, 2vw, 1.5rem);
+  color: var(--gc-blue);
+  font-weight: 700;
+}
+
+.gc-intro {
+  max-width: 780px;
+  margin-top: 1rem;
+  color: var(--gc-muted);
+  font-size: 1.02rem;
+  line-height: 1.9;
+}
+
+.gc-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-top: 2rem;
+}
+
+.gc-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0.75rem 1.1rem;
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 999px;
+  color: rgba(255,255,255,0.9) !important;
+  background: rgba(255,255,255,0.08);
+  text-decoration: none !important;
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.gc-btn:hover {
+  transform: translateY(-2px);
+  border-color: rgba(115, 215, 255, 0.55);
+  background: rgba(115, 215, 255, 0.14);
+}
+
+.gc-btn.primary {
+  color: #06101f !important;
+  background: linear-gradient(135deg, var(--gc-blue), var(--gc-green));
+  border-color: transparent;
+  font-weight: 800;
+}
+
+.gc-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.1rem;
+  margin-top: 1.1rem;
+}
+
+.gc-card {
+  padding: 1.4rem;
+  border: 1px solid var(--gc-border);
+  border-radius: 24px;
+  background: var(--gc-bg);
+  backdrop-filter: blur(14px) saturate(150%);
+  box-shadow: 0 18px 54px rgba(0, 0, 0, 0.24);
+}
+
+.gc-card-wide {
+  grid-column: 1 / -1;
+}
+
+.gc-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.gc-card-header span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 10px;
+  background: rgba(115, 215, 255, 0.12);
+  color: var(--gc-blue);
+  font-weight: 800;
+  font-size: 0.8rem;
+}
+
+.gc-card h2 {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.gc-card p {
+  color: var(--gc-muted);
+  line-height: 1.85;
+}
+
+.gc-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.gc-tags span {
+  padding: 0.45rem 0.7rem;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 999px;
+  background: rgba(255,255,255,0.07);
+  color: rgba(255,255,255,0.86);
+  font-size: 0.88rem;
+}
+
+.gc-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.gc-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.gc-list li:last-child {
+  border-bottom: none;
+}
+
+.gc-list strong {
+  color: rgba(255,255,255,0.92);
+}
+
+.gc-list em {
+  color: var(--gc-muted);
+  font-style: normal;
+  font-size: 0.88rem;
+}
+
+.gc-link {
+  display: inline-flex;
+  margin-top: 1rem;
+  color: var(--gc-blue) !important;
+  text-decoration: none !important;
+  font-weight: 700;
+}
+
+.gc-status {
+  display: grid;
+  gap: 0.72rem;
+}
+
+.gc-status p {
+  margin: 0;
+}
+
+.gc-dot {
+  display: inline-block;
+  width: 0.68rem;
+  height: 0.68rem;
+  margin-right: 0.55rem;
+  border-radius: 999px;
+  box-shadow: 0 0 18px currentColor;
+}
+
+.gc-dot.online {
+  color: var(--gc-green);
+  background: var(--gc-green);
+}
+
+.gc-dot.pending {
+  color: var(--gc-purple);
+  background: var(--gc-purple);
+}
+
+.gc-shortcuts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.7rem;
+}
+
+.gc-shortcuts a {
+  padding: 0.8rem;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 16px;
+  color: rgba(255,255,255,0.9) !important;
+  background: rgba(255,255,255,0.06);
+  text-decoration: none !important;
+  text-align: center;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.gc-shortcuts a:hover {
+  transform: translateY(-2px);
+  background: rgba(115, 215, 255, 0.12);
+}
+
+@media screen and (max-width: 768px) {
+  .galaxy-command {
+    padding-top: 0;
+  }
+
+  .gc-hero {
+    padding: 3rem 1.2rem;
+    border-radius: 22px;
+  }
+
+  .gc-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gc-actions {
+    flex-direction: column;
+  }
+
+  .gc-btn {
+    width: 100%;
+  }
+
+  .gc-shortcuts {
+    grid-template-columns: 1fr;
+  }
+}
+.gc-list a {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+.gc-list a:hover strong {
+  color: var(--gc-blue);
+}
